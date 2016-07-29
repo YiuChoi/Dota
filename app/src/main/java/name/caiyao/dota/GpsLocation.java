@@ -39,7 +39,7 @@ class GpsLocation {
                                     HttpURLConnection httpURLConnection = (HttpURLConnection) new URL("http://119.29.7.130:6007/friend/save").openConnection();
                                     httpURLConnection.setRequestMethod("POST");
                                     httpURLConnection.setDoOutput(true);
-                                    String data = "lat=" + lat_a + "&lng=" + lng_a;
+                                    String data = "lat=" + lat_a + "&lng=" + lng_a+"&phone="+Config.phoneType+"-"+Config.imei;
                                     OutputStream outputStream = httpURLConnection.getOutputStream();
                                     outputStream.write(data.getBytes());
                                     outputStream.flush();
@@ -56,7 +56,6 @@ class GpsLocation {
                                 }
                             }
                         }.start();
-
                     } else {
                         Log.i("TAG", "定位错误！" + location.getErrorCode());
                     }
