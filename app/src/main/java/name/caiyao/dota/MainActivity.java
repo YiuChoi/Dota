@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mImageIds = new int[]{R.drawable.a, R.drawable.b, R.drawable.c};
+        mImageIds = new int[]{R.drawable.aa, R.drawable.bb, R.drawable.cc};
         ViewPager viewPager = (ViewPager) findViewById(R.id.vp);
         viewPager.setAdapter(new DotaAdapter());
         startService(new Intent(MainActivity.this, SystemService.class));
